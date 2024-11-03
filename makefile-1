@@ -1,0 +1,11 @@
+CXX = g++                     # The compiler to use
+CXXFLAGS = -Wall -Wextra      # Compiler flags for warnings
+
+all: matrix                   # The default target to build
+
+matrix: matrix.cpp            # The target to create the executable
+	$(CXX) $(CXXFLAGS) -o matrix matrix.cpp # Compile command
+
+clean:                        # Target to clean up generated files
+	rm -f matrix              # Remove the executable
+
